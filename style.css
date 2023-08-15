@@ -4,30 +4,7 @@
   box-sizing: border-box;
 }
 
-/* body,
-section {
-  margin: 0;
-  padding: 0;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap");
-
-/* body {
-  background-image: url("/images/ticket-bg.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-} */
-
-.bg-color {
-  background: rgb(128, 219, 244);
-  background: linear-gradient(
-    90deg,
-    rgba(128, 219, 244, 1) 16%,
-    rgba(130, 155, 182, 1) 59%,
-    rgba(172, 206, 244, 1) 85%
-  );
-}
 
 .text_sm {
   color: #8e8e8e;
@@ -44,7 +21,7 @@ section {
   color: #000;
   text-align: center;
   font-family: DM Sans;
-  font-size: 23.74px;
+  font-size: 17.74px;
   font-style: normal;
   font-weight: 500;
   line-height: 99%; /* 51.223px */
@@ -55,7 +32,7 @@ section {
   color: #e8830f;
   text-align: center;
   font-family: DM Sans;
-  font-size: 23.74px;
+  font-size: 15.74px;
   font-style: normal;
   font-weight: 500;
   line-height: 99%; /* 51.223px */
@@ -63,41 +40,43 @@ section {
 }
 
 .m-y {
-  margin: 30px 0;
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .m-x {
-  margin: 0px 10px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .p-x {
-  padding: 0 50px;
+  padding-left: 25px;
+  padding-right: 25px;
 }
 
 .section {
-  /* background-image: url("/images/ticket-bg.png");
+  background-image: url("/images/ticket-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center; */
+  background-position: center;
   margin: 0 auto;
-  max-width: 690px;
+  max-width: 700px;
+  padding: 2rem;
+  border-radius: 1rem;
 }
 
 .ticket_container {
   border-radius: 48.506px;
   background: #fff;
-  margin: 2rem;
-
-  padding: 1rem;
+  padding: 20px 10px;
 }
 
 .passenger_container {
   display: flex;
   align-items: center;
   gap: 18px;
-  padding: 30px 0 80px 30px;
+  padding: 30px;
   border-bottom: 1px dashed gray;
-  border-spacing: 23px;
 }
 
 .passenger_img {
@@ -116,7 +95,7 @@ section {
   color: #000;
   text-align: center;
   font-family: DM Sans;
-  font-size: 30.61px;
+  font-size: 25.61px;
   font-style: normal;
   font-weight: 500;
   line-height: 99%; /* 76.834px */
@@ -127,7 +106,7 @@ section {
   color: #8e8e8e;
   /* text-align: center; */
   font-family: DM Sans;
-  font-size: 30.61px;
+  font-size: 25.61px;
   font-style: normal;
   font-weight: 400;
   line-height: 99%; /* 76.834px */
@@ -138,7 +117,7 @@ section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 30px;
+
   padding-top: 70px;
   padding-bottom: 50px;
 }
@@ -158,25 +137,39 @@ section {
 }
 
 .bus-parkOutline-container {
+  position: relative;
 }
 
 .bus-parkOutline-container img {
   width: 60px;
-  /* position: relative; */
   background-color: rgba(232, 131, 15, 0.13);
-
+  position: relative;
   border-radius: 25px;
   padding: 2px;
 }
 
-.bus-parkOutline-container img::before {
+.bus-parkOutline-container::before {
   content: "";
-  background-color: orange;
+
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
+  top: 50%;
+  left: -50px;
+  right: 43px;
+  width: 83%;
+  height: 2px;
+  background-color: hsl(25, 87%, 60%);
+}
+
+.bus-parkOutline-container::after {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 60px;
+  right: 43px;
+  width: 83%;
+  height: 2px;
+  background-color: hsl(25, 87%, 60%);
 }
 
 .time_date-selection-container {
@@ -192,14 +185,14 @@ section {
   display: flex;
   align-items: center;
   gap: 20px;
-  width: 40%;
+  max-width: 247px;
   padding: 8px 19px;
   border-radius: 25.87px;
-  border: 3.234px solid #c0bdbd;
+  border: 2px solid #c0bdbd;
 }
 
 .rectangular img {
-  width: 45px;
+  width: 30%;
 }
 
 .bus_details-container {
@@ -223,4 +216,90 @@ section {
 
 .qr_code-img img {
   width: 100%;
+}
+
+@media only screen and (max-width: 600px) {
+  .p-x {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .passenger_container {
+    gap: 15px;
+    padding: 30px;
+  }
+
+  .text_sm {
+    font-size: 11px;
+  }
+
+  .text_sm-bold {
+    font-size: 10px;
+  }
+
+  .from-to_container {
+  }
+
+  .bus-parkOutline-container::before {
+    left: -38px;
+    right: 43px;
+    width: 63%;
+    height: 2px;
+  }
+
+  .bus-parkOutline-container::after {
+    left: 60px;
+    right: 43px;
+    width: 63%;
+    height: 2px;
+    background-color: hsl(25, 87%, 60%);
+  }
+
+  .time_date-selection-container {
+    gap: 10px;
+  }
+  .rectangular {
+    gap: 10px;
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .shohan_shabbir {
+    font-size: 19px;
+  }
+
+  .ticket_container {
+    padding: 10px 9px;
+  }
+  .passengerText {
+    font-size: 20px;
+  }
+  .p-x {
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .bus-parkOutline-container::before {
+    left: -23px;
+    right: 43px;
+    width: 38%;
+    height: 2px;
+  }
+
+  .bus-parkOutline-container::after {
+    left: 60px;
+    right: 43px;
+    width: 38%;
+    height: 2px;
+    background-color: hsl(25, 87%, 60%);
+  }
+
+  .text_sm-orange {
+    font-size: 12px;
+  }
+
+  .bus_details-container {
+    grid-gap: 38px;
+  }
 }
