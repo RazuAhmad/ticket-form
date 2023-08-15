@@ -237,9 +237,6 @@
     font-size: 10px;
   }
 
-  .from-to_container {
-  }
-
   .bus-parkOutline-container::before {
     left: -38px;
     right: 43px;
