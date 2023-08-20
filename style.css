@@ -261,7 +261,7 @@
   .bus-parkOutline-container::after {
     left: 60px;
     right: 43px;
-    width: 63%;
+    width: 60%;
     height: 2px;
     background-color: hsl(25, 87%, 60%);
   }
