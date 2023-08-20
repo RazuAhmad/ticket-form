@@ -299,3 +299,30 @@
     width: 25%;
   }
 }
+
+@media only screen and (max-width: 332px) {
+  .bus-parkOutline-container::before {
+    left: -27px;
+    width: 54%;
+    height: 1px;
+  }
+
+  .bus-parkOutline-container::after {
+    left: 50px;
+    right: 43px;
+    width: 42%;
+    height: 1px;
+  }
+
+  .bus-parkOutline-container img {
+    width: 50px;
+  }
+
+  .rectangular {
+    padding: 8px 10px;
+  }
+
+  .rectangular img {
+    width: 25%;
+  }
+}
