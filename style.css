@@ -302,8 +302,8 @@
 
 @media only screen and (max-width: 332px) {
   .bus-parkOutline-container::before {
-    left: -27px;
-    width: 54%;
+    left: -25px;
+    width: 50%;
     height: 1px;
   }
 
