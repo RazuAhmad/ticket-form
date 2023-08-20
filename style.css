@@ -266,3 +266,36 @@
     background-color: hsl(25, 87%, 60%);
   }
 }
+
+@media only screen and (max-width: 360px) {
+  .bus-parkOutline-container::before {
+    left: -30px;
+    width: 49%;
+  }
+
+  .bus-parkOutline-container::after {
+    left: 60px;
+    right: 43px;
+    width: 45%;
+  }
+}
+@media only screen and (max-width: 345px) {
+  .bus-parkOutline-container::before {
+    left: -27px;
+    width: 45%;
+  }
+
+  .bus-parkOutline-container::after {
+    left: 60px;
+    right: 43px;
+    width: 40%;
+  }
+
+  .rectangular {
+    padding: 8px 10px;
+  }
+
+  .rectangular img {
+    width: 25%;
+  }
+}
